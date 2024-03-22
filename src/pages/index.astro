@@ -1,86 +1,133 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Ben Daly | Full-stack Developer">
-	<main>
-		<h1>Ben Daly</h1>
-  <h2>Engineering Manager | Full-stack Developer</h2>
-  
-  <section id="contact">
-    <h3>Contact</h3>
-    <address>
-      G06/1A Oakley Avenue, Waterview, Auckland, 1026<br>
-      M: +6421 022 72749<br>
-      E: <a href="mailto:bendaly0403@gmail.com">bendaly0403@gmail.com</a>
-    </address>
-  </section>
-  
-  <section id="work-experience">
-    <h3>Work Experience</h3>
-    
-    <h4>ArchiPro</h4>
-    <p><strong>Engineering Manager</strong><br>
-    Oct 2023 - Present</p>
-    <ul>
-      <li>Leading B2B Engineering Team, collaborating with Head of Product B2B for technical advice on feature development.</li>
-      <li>Key responsibilities include team management, technical evaluation, and providing technical insights.</li>
-    </ul>
-    
-    <p><strong>Full-stack Developer</strong><br>
-    Oct 2022 - Oct 2023</p>
-    <ul>
-      <li>Developed ecommerce integrations, mentored team members, and enhanced the product through technical design and troubleshooting.</li>
-    </ul>
-    
-    <h4>Theta (Product Group)</h4>
-    <p><strong>Senior Consultant</strong><br>
-    Apr 2022 - Oct 2022</p>
-    <p><strong>Consultant</strong><br>
-    Apr 2019 - Apr 2022</p>
-    <p><strong>Graduate</strong><br>
-    Jan 2019 - Apr 2019</p>
-    <ul>
-      <li>Developed custom integrations, led mobile app development, and contributed to infrastructure code among other tasks.</li>
-    </ul>
-    
-    <h4>Hansen Technologies</h4>
-    <p><strong>Software Engineer Intern</strong><br>
-    March 2018 - September 2018</p>
-    <ul>
-      <li>Lead developer for an interactive data visualisation project, managing the project end-to-end.</li>
-    </ul>
-  </section>
-  
-  <section id="education">
-    <h3>Education</h3>
-    <p>University of Auckland<br>
-    Bachelor of Science - Computer Science<br>
-    2014 - 2017</p>
-  </section>
-  
-  <section id="skills">
-    <h3>Skills</h3>
-    <ul>
-      <li>Charismatic and level-headed</li>
-      <li>Experienced in problem-solving</li>
-      <li>Creative and out-of-the-box thinker</li>
-      <li>Excellent communication skills</li>
-      <li>Team player with a positive team-first attitude</li>
-    </ul>
-  </section>
-  
-  <section id="languages-and-technologies">
-    <h3>Languages & Technologies</h3>
-    <p>C#/.NET, JavaScript, TypeScript, React, SQL (SQL Server, MySQL), PHP, GraphQL, Flutter/Dart (iOS & Android), AWS, Azure, CI/CD (GitHub Actions, Azure DevOps, Bitbucket Pipelines), PowerShell, Git, Redis</p>
-  </section>
-  
-  <section id="references">
-    <h3>References</h3>
-    <ul>
-      <li>Marcel Saville - ArchiPro, <a href="https://www.linkedin.com/in/marcelsaville">View LinkedIn</a></li>
-      <li>Jim Taylor - Theta, <a href="https://www.linkedin.com/in/jim-taylor-nz/">View LinkedIn</a></li>
-    </ul>
-  </section>
-	</main>
+  <main class="m-4 lg:w-[210mm] w-100 rounded-md p-16">
+    <h1 class="text-6xl font-extrabold tracking-wider">Ben Daly</h1>
+    <h2 class="text-2xl font-bold mt-4 tracking-wide">
+      Engineering Manager | Full-stack Developer
+    </h2>
+   
+
+    <section id="work-experience" class="mt-4">
+      <h3 class="text-xl font-semibold">Work Experience</h3>
+
+      <h4 class="text-xl mt-4">ArchiPro</h4>
+      <p>
+        <strong>Engineering Manager</strong><br />
+        Oct 2023 - Present
+      </p>
+      <ul>
+        <li>
+          Leading B2B Engineering Team, collaborating with Head of Product B2B
+          for technical advice on feature development.
+        </li>
+        <li>
+          Key responsibilities include team management, technical evaluation,
+          and providing technical insights.
+        </li>
+      </ul>
+
+      <p>
+        <strong>Full-stack Developer</strong><br />
+        Oct 2022 - Oct 2023
+      </p>
+      <ul>
+        <li>
+          Developed ecommerce integrations, mentored team members, and enhanced
+          the product through technical design and troubleshooting.
+        </li>
+      </ul>
+
+      <h4>Theta (Product Group)</h4>
+      <p>
+        <strong>Senior Consultant</strong><br />
+        Apr 2022 - Oct 2022
+      </p>
+      <p>
+        <strong>Consultant</strong><br />
+        Apr 2019 - Apr 2022
+      </p>
+      <p>
+        <strong>Graduate</strong><br />
+        Jan 2019 - Apr 2019
+      </p>
+      <ul>
+        <li>
+          Developed custom integrations, led mobile app development, and
+          contributed to infrastructure code among other tasks.
+        </li>
+      </ul>
+
+      <h4>Hansen Technologies</h4>
+      <p>
+        <strong>Software Engineer Intern</strong><br />
+        March 2018 - September 2018
+      </p>
+      <ul>
+        <li>
+          Lead developer for an interactive data visualisation project, managing
+          the project end-to-end.
+        </li>
+      </ul>
+    </section>
+
+    <section id="education">
+      <h3>Education</h3>
+      <p>
+        University of Auckland<br />
+        Bachelor of Science - Computer Science<br />
+        2014 - 2017
+      </p>
+    </section>
+
+    <section id="skills">
+      <h3>Skills</h3>
+      <ul>
+        <li>Charismatic and level-headed</li>
+        <li>Experienced in problem-solving</li>
+        <li>Creative and out-of-the-box thinker</li>
+        <li>Excellent communication skills</li>
+        <li>Team player with a positive team-first attitude</li>
+      </ul>
+    </section>
+
+    <section id="languages-and-technologies">
+      <h3>Languages & Technologies</h3>
+      <p>
+        C#/.NET, JavaScript, TypeScript, React, SQL (SQL Server, MySQL), PHP,
+        GraphQL, Flutter/Dart (iOS & Android), AWS, Azure, CI/CD (GitHub
+        Actions, Azure DevOps, Bitbucket Pipelines), PowerShell, Git, Redis
+      </p>
+    </section>
+
+    <section id="references">
+      <h3>References</h3>
+      <ul>
+        <li>
+          Marcel Saville - ArchiPro, <a
+            href="https://www.linkedin.com/in/marcelsaville">View LinkedIn</a>
+        </li>
+        <li>
+          Jim Taylor - Theta, <a
+            href="https://www.linkedin.com/in/jim-taylor-nz/">View LinkedIn</a>
+        </li>
+      </ul>
+    </section>
+	<section id="contact" class="mt-2">
+		<h3 class="text-xl font-bold">Contact</h3>
+		<address class="not-italic">
+		  G06/1A Oakley Avenue, Waterview, Auckland, 1026<br />
+		  M: +6421 022 72749<br />
+		  E: <a
+			href="mailto:bendaly0403@gmail.com"
+			class="underline underline-offset-2">bendaly0403@gmail.com</a
+		  >
+		</address>
+	  </section>
+  </main>
+  <div class="fixed -rotate-90 right-0 bottom-50 translate-y-1/2 select-none">
+    Curriculum Vitae
+  </div>
 </Layout>

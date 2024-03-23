@@ -1,133 +1,173 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Position from "../components/Position.astro";
+import SectionHeading from "../components/SectionHeading.astro";
+import List from "../components/List.astro";
+import LinkedIn from "../components/LinkedIn.astro";
+import GitHub from "../components/GitHub.astro";
 ---
 
-<Layout title="Ben Daly | Full-stack Developer">
-  <main class="m-4 lg:w-[210mm] w-100 rounded-md p-16">
+<Layout title="Ben Daly | Engineering Manager | Full-stack Developer">
+  <main class="m-4 lg:w-[210mm] w-100 rounded-md py-8 px-8">
     <h1 class="text-6xl font-extrabold tracking-wider">Ben Daly</h1>
     <h2 class="text-2xl font-bold mt-4 tracking-wide">
       Engineering Manager | Full-stack Developer
     </h2>
-   
-
+    <div class="md:absolute right-16 top-32 flex gap-2 mt-2 md:mt-0">
+      <a href="https://github.com/bendaly818" class="w-6 h-6" target="_blank">
+        <GitHub />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/bendalynz"
+        class="w-6 h-6"
+        target="_blank"
+      >
+        <LinkedIn />
+      </a>
+    </div>
     <section id="work-experience" class="mt-4">
-      <h3 class="text-xl font-semibold">Work Experience</h3>
+      <SectionHeading>Work</SectionHeading>
+      <Position
+        company="ArchiPro"
+        titles={[
+          {
+            title: "Engineering Manager",
+            tenure: "Oct 2023 - Present",
+          },
+          {
+            title: "Full-stack Developer",
+            tenure: "Oct 2022 - Oct 2023",
+          },
+        ]}
+        description={`
+		I am currently the Engineering Manager of our B2B Engineering Team, consisting of myself and four engineers. 
+		Collaborating with the Head of Product B2B directly, providing technical advice and knowledge on existing/upcoming features.
+		I joined as a Full-stack Developer and have developed a range of Ecommerce integrations, provided 
+		`}
+        responsibilities={[
+          "Managing and providing guidance to a team of four engineers",
+          "Technical evaluation and estimation of upcoming product features",
+          "Providing technical insight to our product team",
+          "Developing and maintaining integrations with Ecommerce platforms",
+          "Developing and maintaining our internal Advertising tech stack",
+        ]}
+      />
+      <Position
+        company="Theta"
+        titles={[
+          {
+            title: "Senior Consultant",
+            tenure: "Apr 2022 - Oct 2022",
+          },
+          {
+            title: "Consultant",
+            tenure: "Apr 2019 - Apr 2022",
+          },
+          {
+            title: "Graduate",
+            tenure: "Jan 2019 - Apr 2019",
+          },
+        ]}
+        description={`
+		I worked as a Senior Consultant in the Product Group, where I developed custom integrations, led mobile app development, and contributed to infrastructure code among other tasks.
+		`}
+        responsibilities={[
+          "Consulted with customers across multiple products to build custom integrations & bespoke features",
+          "Worked directly with product owners to assess requirements & design features",
+          "Contributed to technical design, architecture & implementation across multiple products/ technologies",
+          "Performed code review across all team products",
+          "Automated and managed deployments/releases for products within team portfolio",
+          "Developed integrations for our products/services utilised by our customers and internally",
+          "Lead for mobile app development of EVA Check-in mobile apps (iOS and Android)",
+          "Built and contributed to key infrastructure code: front-end & back-end",
+          "Technical mentor to colleagues",
+          "Collaborates with colleagues across technical design  and development of product features",
+          "Managed and mentored interns to provide guidance towards the completion of their projects",
+        ]}
+      />
 
-      <h4 class="text-xl mt-4">ArchiPro</h4>
-      <p>
-        <strong>Engineering Manager</strong><br />
-        Oct 2023 - Present
-      </p>
-      <ul>
-        <li>
-          Leading B2B Engineering Team, collaborating with Head of Product B2B
-          for technical advice on feature development.
-        </li>
-        <li>
-          Key responsibilities include team management, technical evaluation,
-          and providing technical insights.
-        </li>
-      </ul>
+      <Position
+        company="Hansen Technologies"
+        titles={[
+          {
+            title: "Software Engineer Intern",
+            tenure: "Mar 2018 - Sep 2018",
+          },
+        ]}
+        description={`
+		I was the lead developer for an interactive data visualisation project, managing the project end-to-end.
+		`}
+        responsibilities={[
+          "Lead developer for an interactive data visualisation project",
+        ]}
+      />
 
-      <p>
-        <strong>Full-stack Developer</strong><br />
-        Oct 2022 - Oct 2023
-      </p>
-      <ul>
-        <li>
-          Developed ecommerce integrations, mentored team members, and enhanced
-          the product through technical design and troubleshooting.
-        </li>
-      </ul>
+      <section id="skills" class="mt-4">
+        <SectionHeading>Skills</SectionHeading>
+        <List
+          items={[
+            "Charismatic and level-headed",
+            "Experienced in problem-solving",
+            "Creative and out-of-the-box thinker",
+            "Excellent communication skills",
+            "Team player with a positive team-first attitude",
+          ]}
+        />
+      </section>
 
-      <h4>Theta (Product Group)</h4>
-      <p>
-        <strong>Senior Consultant</strong><br />
-        Apr 2022 - Oct 2022
-      </p>
-      <p>
-        <strong>Consultant</strong><br />
-        Apr 2019 - Apr 2022
-      </p>
-      <p>
-        <strong>Graduate</strong><br />
-        Jan 2019 - Apr 2019
-      </p>
-      <ul>
-        <li>
-          Developed custom integrations, led mobile app development, and
-          contributed to infrastructure code among other tasks.
-        </li>
-      </ul>
+      <section id="languages-and-technologies" class="mt-4">
+        <SectionHeading>Languages & Technologies</SectionHeading>
+        <p class="text-sm mt-2">
+          C#/.NET, JavaScript, TypeScript, React, SQL (SQL Server, MySQL), PHP,
+          GraphQL, Flutter/Dart (iOS & Android), AWS, Azure, CI/CD (GitHub
+          Actions, Azure DevOps, Bitbucket Pipelines), PowerShell, Git, Redis
+        </p>
+      </section>
 
-      <h4>Hansen Technologies</h4>
-      <p>
-        <strong>Software Engineer Intern</strong><br />
-        March 2018 - September 2018
-      </p>
-      <ul>
-        <li>
-          Lead developer for an interactive data visualisation project, managing
-          the project end-to-end.
-        </li>
-      </ul>
+      <section id="education" class="mt-4">
+        <SectionHeading>Education</SectionHeading>
+        <p>
+          University of Auckland<br />
+          Bachelor of Science - Computer Science<br />
+          2014 - 2017
+        </p>
+      </section>
+
+      <section id="references" class="mt-4">
+        <SectionHeading>References</SectionHeading>
+        <ul>
+          <li>
+            Marcel Saville - ArchiPro | <a
+              href="https://www.linkedin.com/in/marcelsaville"
+              class="underline underline-offset-2">LinkedIn</a
+            >
+          </li>
+          <li>
+            Jim Taylor - Theta | <a
+              href="https://www.linkedin.com/in/jim-taylor-nz/"
+              class="underline underline-offset-2">LinkedIn</a
+            >
+          </li>
+        </ul>
+      </section>
+      <section id="contact" class="mt-4">
+        <SectionHeading>Contact</SectionHeading>
+        <address class="not-italic">
+          A: G06/1A Oakley Avenue, Waterview, Auckland, 1026<br />
+          M: <a href="tel:+642102272749" class="underline underline-offset-2"
+            >+642102272749
+          </a><br />
+          E: <a
+            href="mailto:bendaly0403@gmail.com"
+            class="underline underline-offset-2">bendaly0403@gmail.com</a
+          >
+        </address>
+      </section>
     </section>
-
-    <section id="education">
-      <h3>Education</h3>
-      <p>
-        University of Auckland<br />
-        Bachelor of Science - Computer Science<br />
-        2014 - 2017
-      </p>
-    </section>
-
-    <section id="skills">
-      <h3>Skills</h3>
-      <ul>
-        <li>Charismatic and level-headed</li>
-        <li>Experienced in problem-solving</li>
-        <li>Creative and out-of-the-box thinker</li>
-        <li>Excellent communication skills</li>
-        <li>Team player with a positive team-first attitude</li>
-      </ul>
-    </section>
-
-    <section id="languages-and-technologies">
-      <h3>Languages & Technologies</h3>
-      <p>
-        C#/.NET, JavaScript, TypeScript, React, SQL (SQL Server, MySQL), PHP,
-        GraphQL, Flutter/Dart (iOS & Android), AWS, Azure, CI/CD (GitHub
-        Actions, Azure DevOps, Bitbucket Pipelines), PowerShell, Git, Redis
-      </p>
-    </section>
-
-    <section id="references">
-      <h3>References</h3>
-      <ul>
-        <li>
-          Marcel Saville - ArchiPro, <a
-            href="https://www.linkedin.com/in/marcelsaville">View LinkedIn</a>
-        </li>
-        <li>
-          Jim Taylor - Theta, <a
-            href="https://www.linkedin.com/in/jim-taylor-nz/">View LinkedIn</a>
-        </li>
-      </ul>
-    </section>
-	<section id="contact" class="mt-2">
-		<h3 class="text-xl font-bold">Contact</h3>
-		<address class="not-italic">
-		  G06/1A Oakley Avenue, Waterview, Auckland, 1026<br />
-		  M: +6421 022 72749<br />
-		  E: <a
-			href="mailto:bendaly0403@gmail.com"
-			class="underline underline-offset-2">bendaly0403@gmail.com</a
-		  >
-		</address>
-	  </section>
   </main>
-  <div class="fixed -rotate-90 right-0 bottom-50 translate-y-1/2 select-none">
+  <div
+    class="fixed -rotate-90 right-0 bottom-28 translate-y-1/2 select-none tracking-wide"
+  >
     Curriculum Vitae
   </div>
 </Layout>

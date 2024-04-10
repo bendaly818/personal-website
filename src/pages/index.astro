@@ -5,6 +5,7 @@ import SectionHeading from "../components/SectionHeading.astro";
 import List from "../components/List.astro";
 import LinkedIn from "../icons/LinkedIn.astro";
 import GitHub from "../icons/GitHub.astro";
+import Section from "../components/Section.astro";
 ---
 
 <Layout title="Ben Daly | Engineering Manager | Full-stack Developer">
@@ -16,7 +17,7 @@ import GitHub from "../icons/GitHub.astro";
       Engineering Manager | Full-stack Developer
     </h2>
 
-    <section id="work-experience" class="mt-8">
+    <Section id="work-experience" class="mt-8 print:mt-4">
       <SectionHeading>Work</SectionHeading>
       <Position
         headingClassName="mt-2"
@@ -69,25 +70,18 @@ I joined ArchiPro as a Full-stack Developer with a primary focus on Ecommerce in
         ]}
         description={`I worked as a Senior Consultant in the Product Group, where I developed custom integrations, led mobile app development, and contributed to infrastructure code among other tasks.`}
         responsibilities={[
-          "Consulted with customers across multiple products to build custom integrations & bespoke features",
-          "Worked directly with product owners to assess requirements & design features",
-          "Contributed to technical design, architecture & implementation across multiple products/ technologies",
-          "Performed code review across all team products",
-          "Automated and managed deployments/releases for products within team portfolio",
-          "Developed integrations for our products/services utilised by our customers and internally",
-          "Built and contributed to key infrastructure code: front-end & back-end",
-          "Technical mentor to colleagues",
-          "Collaborated with colleagues across technical design and development of product features",
-          "Managed and mentored interns to provide guidance towards the completion of their projects",
+"Consulted with customers to develop custom integrations and bespoke features across multiple products.",
+"Collaborated with product owners to assess requirements and design features, contributing to technical design, architecture, and implementation.",
+"Conducted code reviews and automated/manage deployments/releases for products within the team portfolio.",
+"Built and contributed to key infrastructure code, encompassing both front-end and back-end.",
+"Provided technical mentorship to colleagues and managed/intern mentoring.",
+"Collaborated with colleagues on technical design and development of product features.",
         ]}
         projects={[
-          "Main developer of FAQ Bot (https://faqbot.ai) notable features include: self-service sign up flow, live chat, flexible engagements, bot style customisation,  FAQ Pages (statically generated) ",
-          "Key developer for EVA Check-in (https://evacheckin.com) notable features include:  bookings, custom check-in flows, rewriting legacy  application code, URL shortener, mobile apps, UI/UX overhauls ",
-          "Led integration with Stripe billing across multiple  products in the Theta portfolio ",
-          "Led adoption of using TypeScript in EVA Check-in ",
-          "Led development of modernising the user interfaces  of EVA Check-in customer facing product offerings ",
-          "Led integration with Procore, a global, all-in-one  construction management software within EVA Check-in to attract customers for Theta from the  construction industry ",
-          "Developed a generic webhook system for our  in-house application framework",
+          "FAQ Bot (https://faqbot.ai): Notable features including self-service sign-up flow, live chat, flexible engagements, bot style customization, and FAQ Pages (statically generated).",
+          "EVA Check-in (https://evacheckin.com): Notable features such as bookings, custom check-in flows, rewriting legacy application code, URL shortener, mobile apps, and UI/UX overhauls. Also led adoption of TypeScript, and integrated Procore, a global construction management software.",
+          "Led integration with Stripe billing across multiple products in the Theta portfolio",
+          "Generic Webhook System: Developed a generic webhook system for the in-house application framework.",
         ]}
       />
 
@@ -103,88 +97,92 @@ I joined ArchiPro as a Full-stack Developer with a primary focus on Ecommerce in
         responsibilities={[
           "Managed the project end-to-end from inception to completion",
           "Managed relationship with senior leadership, providing updates on progress of work & scheduled meetings",
-          "Created an interactive data visualisation within existing software using Java and JavaScript which saw immediate impact & use once deployed & sparked global interest within the company ",
+        ]}
+        projects={[
+          "Created an interactive data visualisation within existing software using Java and JavaScript which saw immediate impact & use once deployed & sparked global interest within the company",
         ]}
       />
-      <section id="skills" class="mt-8">
-        <SectionHeading>Skills</SectionHeading>
-        <List
-          items={[
-            "Charismatic and level-headed",
-            "Experienced in problem-solving",
-            "Creative and out-of-the-box thinker",
-            "Excellent communication skills",
-            "Team player with a positive team-first attitude",
-          ]}
-        />
-      </section>
+    </Section>
 
-      <section id="languages-and-technologies" class="mt-8">
-        <SectionHeading>Languages & Technologies</SectionHeading>
-        <p class="text-sm mt-2">
-          C#/.NET, JavaScript, TypeScript, React, Remix, SQL (SQL Server,
-          MySQL), PHP, GraphQL, Flutter/Dart (iOS & Android), AWS, Azure, CI/CD
-          (GitHub Actions, Azure DevOps, Bitbucket Pipelines), PowerShell, Git,
-          Redis
-        </p>
-      </section>
+    <Section id="skills">
+      <SectionHeading>Skills</SectionHeading>
+      <List
+        items={[
+          "Charismatic and level-headed",
+          "Experienced in problem-solving",
+          "Creative and out-of-the-box thinker",
+          "Excellent communication skills",
+          "Team player with a positive team-first attitude",
+        ]}
+      />
+    </Section>
 
-      <section id="education" class="mt-8">
-        <SectionHeading>Education</SectionHeading>
-        <p>
-          University of Auckland<br />
-          Bachelor of Science - Computer Science<br />
-          2014 - 2017
-        </p>
-      </section>
+    <Section id="languages-and-technologies">
+      <SectionHeading>Languages & Technologies</SectionHeading>
+      <p class="text-sm mt-2">
+        C#/.NET, JavaScript, TypeScript, React, Remix, SQL (SQL Server, MySQL),
+        PHP, GraphQL, Flutter/Dart (iOS & Android), AWS, Azure, CI/CD (GitHub
+        Actions, Azure DevOps, Bitbucket Pipelines), PowerShell, Git, Redis
+      </p>
+    </Section>
 
-      <section id="references" class="mt-8">
-        <SectionHeading>References</SectionHeading>
-        <ul>
-          <li>
-            Marcel Saville - ArchiPro | <a
-              href="https://www.linkedin.com/in/marcelsaville"
-              class="underline underline-offset-2">LinkedIn</a
-            >
-          </li>
-          <li>
-            Jim Taylor - Theta | <a
-              href="https://www.linkedin.com/in/jim-taylor-nz/"
-              class="underline underline-offset-2">LinkedIn</a
-            >
-          </li>
-        </ul>
-      </section>
-      <section id="contact" class="mt-8">
-        <SectionHeading>Contact</SectionHeading>
-        <address class="not-italic">
-          A: G06/1A Oakley Avenue, Waterview, Auckland, 1026<br />
-          M: <a href="tel:+642102272749" class="underline underline-offset-2"
-            >+642102272749
-          </a><br />
-          E: <a
-            href="mailto:bendaly0403@gmail.com"
-            class="underline underline-offset-2">bendaly0403@gmail.com</a
+    <Section id="education">
+      <SectionHeading>Education</SectionHeading>
+      <p>
+        University of Auckland<br />
+        Bachelor of Science - Computer Science<br />
+        2014 - 2017
+      </p>
+    </Section>
+
+    <Section id="references">
+      <SectionHeading>References</SectionHeading>
+      <ul>
+        <li>
+          Marcel Saville - ArchiPro | <a
+            href="https://www.linkedin.com/in/marcelsaville"
+            class="underline underline-offset-2">LinkedIn</a
           >
-        </address>
-      </section>
-      <section id="socials" class="flex gap-2 mt-2">
-        <a href="https://github.com/bendaly818" class="w-6 h-6" target="_blank">
-          <GitHub />
-        </a>
-        <a
-          href="https://www.linkedin.com/in/bendalynz"
-          class="w-6 h-6"
-          target="_blank"
+        </li>
+        <li>
+          Jim Taylor - Theta | <a
+            href="https://www.linkedin.com/in/jim-taylor-nz/"
+            class="underline underline-offset-2">LinkedIn</a
+          >
+        </li>
+      </ul>
+    </Section>
+
+    <Section id="contact">
+      <SectionHeading>Contact</SectionHeading>
+      <address class="not-italic">
+        A: G06/1A Oakley Avenue, Waterview, Auckland, 1026<br />
+        M: <a href="tel:+642102272749" class="underline underline-offset-2"
+          >+642102272749
+        </a><br />
+        E: <a
+          href="mailto:bendaly0403@gmail.com"
+          class="underline underline-offset-2">bendaly0403@gmail.com</a
         >
-          <LinkedIn />
-        </a>
-      </section>
+      </address>
+    </Section>
+
+    <section id="socials" class="flex gap-2 mt-2">
+      <a href="https://github.com/bendaly818" class="w-6 h-6" target="_blank">
+        <GitHub />
+      </a>
+      <a
+        href="https://www.linkedin.com/in/bendalynz"
+        class="w-6 h-6"
+        target="_blank"
+      >
+        <LinkedIn />
+      </a>
     </section>
+    <div
+      class="fixed -rotate-90 -right-8 md:right-0 md:bottom-28 bottom-24 translate-y-1/2 select-none tracking-wide"
+    >
+      Curriculum Vitae
+    </div>
   </main>
-  <div
-    class="fixed -rotate-90 -right-8 md:right-0 md:bottom-28 bottom-24 translate-y-1/2 select-none tracking-wide"
-  >
-    Curriculum Vitae
-  </div>
 </Layout>

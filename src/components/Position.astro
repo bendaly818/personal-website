@@ -28,11 +28,15 @@ const { company, titles, description,responsibilities ,headingClassName = 'mt-4'
 
 {description && <p class="text-sm mt-2 whitespace-pre-wrap">{description}</p>}
 
-
+<div class="grid grid-cols-2 gap-3">
+  <span>
 {responsibilities?.length && 
 <p class="text-sm mt-2">Responsibilities:</p>
 <List items={responsibilities}/>}
-
+</span>
+<span>
 {projects?.length && <p class="text-sm mt-2">Key Projects:</p>
 <List items={projects}/>}
+</span>
+</div>
   

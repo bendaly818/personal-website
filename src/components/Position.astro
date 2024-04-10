@@ -10,12 +10,13 @@ interface Props {
   description?: string;
   responsibilities?: string[],
   projects?: string[]
+  headingClassName?:string,
 }
 
-const { company, titles, description,responsibilities } = Astro.props;
+const { company, titles, description,responsibilities ,headingClassName = 'mt-4', projects} = Astro.props;
 ---
 
-<h4 class="text-lg font-semibold mt-2">{company}</h4>
+<h4 class:list={["text-lg font-semibold", headingClassName]}>{company}</h4>
 
 {
   titles.map((t) => (
@@ -25,10 +26,13 @@ const { company, titles, description,responsibilities } = Astro.props;
   ))
 }
 
-{description && <p class="text-sm mt-2">{description}</p>}
+{description && <p class="text-sm mt-2 whitespace-pre-wrap">{description}</p>}
 
 
 {responsibilities?.length && 
 <p class="text-sm mt-2">Responsibilities:</p>
-<List items={responsibilities}/>
+<List items={responsibilities}/>}
+
+{projects?.length && <p class="text-sm mt-2">Key Projects:</p>
+<List items={projects}/>}
   

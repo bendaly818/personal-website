@@ -3,31 +3,23 @@ import Layout from "../layouts/Layout.astro";
 import Position from "../components/Position.astro";
 import SectionHeading from "../components/SectionHeading.astro";
 import List from "../components/List.astro";
-import LinkedIn from "../components/LinkedIn.astro";
-import GitHub from "../components/GitHub.astro";
+import LinkedIn from "../icons/LinkedIn.astro";
+import GitHub from "../icons/GitHub.astro";
 ---
 
 <Layout title="Ben Daly | Engineering Manager | Full-stack Developer">
-  <main class="m-4 lg:w-[210mm] w-100 rounded-md py-8 pl-8 pr-16">
-    <h1 class="text-6xl font-extrabold tracking-wider">Ben Daly</h1>
-    <h2 class="text-2xl font-bold mt-4 tracking-wide">
+  <main
+    class="m-4 lg:w-[210mm] w-100 rounded-md lg:py-8 lg:pl-8 lg:pr-16 py-4 pl-4 pr-8"
+  >
+    <h1 class="lg:text-6xl text-4xl font-extrabold tracking-wider">Ben Daly</h1>
+    <h2 class="lg:text-2xl text-lg font-bold lg:mt-4 mt-2 tracking-wide">
       Engineering Manager | Full-stack Developer
     </h2>
-    <div class="md:absolute right-16 top-32 flex gap-2 mt-4 md:mt-0">
-      <a href="https://github.com/bendaly818" class="w-6 h-6" target="_blank">
-        <GitHub />
-      </a>
-      <a
-        href="https://www.linkedin.com/in/bendalynz"
-        class="w-6 h-6"
-        target="_blank"
-      >
-        <LinkedIn />
-      </a>
-    </div>
-    <section id="work-experience" class="mt-4">
+
+    <section id="work-experience" class="mt-8">
       <SectionHeading>Work</SectionHeading>
       <Position
+        headingClassName="mt-2"
         company="ArchiPro"
         titles={[
           {
@@ -39,17 +31,24 @@ import GitHub from "../components/GitHub.astro";
             tenure: "Oct 2022 - Oct 2023",
           },
         ]}
-        description={`
-		I am currently the Engineering Manager of our B2B Engineering Team, consisting of myself and four engineers. 
-		Collaborating with the Head of Product B2B directly, providing technical advice and knowledge on existing/upcoming features.
-		I joined as a Full-stack Developer and have developed a range of Ecommerce integrations, provided 
-		`}
+        description={`I am currently the Engineering Manager of ArchiPro's B2B Engineering Team, consisting of myself and four engineers. Collaborating with the Head of Product B2B directly, providing technical advice and knowledge on existing/upcoming features.
+
+I joined ArchiPro as a Full-stack Developer with a primary focus on Ecommerce integrations.`}
         responsibilities={[
           "Managing and providing guidance to a team of four engineers",
           "Technical evaluation and estimation of upcoming product features",
           "Providing technical insight to our product team",
           "Developing and maintaining integrations with Ecommerce platforms",
           "Developing and maintaining our internal Advertising tech stack",
+          "Mentored team members",
+          "Contributed to product discussions from both a wider business value and technical perspective",
+          "Stand-in team lead for leave cover",
+        ]}
+        projects={[
+          "Created and maintained several Ecommerce product and order integrations (WooCommerce, Shopify, Magento, Squarespace) as well as integrations with Airtable and HubSpot.",
+          "Contributed to technical design and architecture of our integration stack",
+          "Contributed to the wider product, building interfaces, fixing issues no matter the area",
+          "Worked alongside ArchiPro's Head of Operations to improve our whole advertising Airtable solution",
         ]}
       />
       <Position
@@ -68,9 +67,7 @@ import GitHub from "../components/GitHub.astro";
             tenure: "Jan 2019 - Apr 2019",
           },
         ]}
-        description={`
-		I worked as a Senior Consultant in the Product Group, where I developed custom integrations, led mobile app development, and contributed to infrastructure code among other tasks.
-		`}
+        description={`I worked as a Senior Consultant in the Product Group, where I developed custom integrations, led mobile app development, and contributed to infrastructure code among other tasks.`}
         responsibilities={[
           "Consulted with customers across multiple products to build custom integrations & bespoke features",
           "Worked directly with product owners to assess requirements & design features",
@@ -78,11 +75,19 @@ import GitHub from "../components/GitHub.astro";
           "Performed code review across all team products",
           "Automated and managed deployments/releases for products within team portfolio",
           "Developed integrations for our products/services utilised by our customers and internally",
-          "Lead for mobile app development of EVA Check-in mobile apps (iOS and Android)",
           "Built and contributed to key infrastructure code: front-end & back-end",
           "Technical mentor to colleagues",
-          "Collaborates with colleagues across technical design  and development of product features",
+          "Collaborated with colleagues across technical design and development of product features",
           "Managed and mentored interns to provide guidance towards the completion of their projects",
+        ]}
+        projects={[
+          "Main developer of FAQ Bot (https://faqbot.ai) notable features include: self-service sign up flow, live chat, flexible engagements, bot style customisation,  FAQ Pages (statically generated) ",
+          "Key developer for EVA Check-in (https://evacheckin.com) notable features include:  bookings, custom check-in flows, rewriting legacy  application code, URL shortener, mobile apps, UI/UX overhauls ",
+          "Led integration with Stripe billing across multiple  products in the Theta portfolio ",
+          "Led adoption of using TypeScript in EVA Check-in ",
+          "Led development of modernising the user interfaces  of EVA Check-in customer facing product offerings ",
+          "Led integration with Procore, a global, all-in-one  construction management software within EVA Check-in to attract customers for Theta from the  construction industry ",
+          "Developed a generic webhook system for our  in-house application framework",
         ]}
       />
 
@@ -94,15 +99,14 @@ import GitHub from "../components/GitHub.astro";
             tenure: "Mar 2018 - Sep 2018",
           },
         ]}
-        description={`
-		I was the lead developer for an interactive data visualisation project, managing the project end-to-end.
-		`}
+        description={`I was the lead developer for an interactive data visualisation project, managing the project end-to-end.`}
         responsibilities={[
-          "Lead developer for an interactive data visualisation project",
+          "Managed the project end-to-end from inception to completion",
+          "Managed relationship with senior leadership, providing updates on progress of work & scheduled meetings",
+          "Created an interactive data visualisation within existing software using Java and JavaScript which saw immediate impact & use once deployed & sparked global interest within the company ",
         ]}
       />
-
-      <section id="skills" class="mt-4">
+      <section id="skills" class="mt-8">
         <SectionHeading>Skills</SectionHeading>
         <List
           items={[
@@ -115,16 +119,17 @@ import GitHub from "../components/GitHub.astro";
         />
       </section>
 
-      <section id="languages-and-technologies" class="mt-4">
+      <section id="languages-and-technologies" class="mt-8">
         <SectionHeading>Languages & Technologies</SectionHeading>
         <p class="text-sm mt-2">
-          C#/.NET, JavaScript, TypeScript, React, SQL (SQL Server, MySQL), PHP,
-          GraphQL, Flutter/Dart (iOS & Android), AWS, Azure, CI/CD (GitHub
-          Actions, Azure DevOps, Bitbucket Pipelines), PowerShell, Git, Redis
+          C#/.NET, JavaScript, TypeScript, React, Remix, SQL (SQL Server,
+          MySQL), PHP, GraphQL, Flutter/Dart (iOS & Android), AWS, Azure, CI/CD
+          (GitHub Actions, Azure DevOps, Bitbucket Pipelines), PowerShell, Git,
+          Redis
         </p>
       </section>
 
-      <section id="education" class="mt-4">
+      <section id="education" class="mt-8">
         <SectionHeading>Education</SectionHeading>
         <p>
           University of Auckland<br />
@@ -133,7 +138,7 @@ import GitHub from "../components/GitHub.astro";
         </p>
       </section>
 
-      <section id="references" class="mt-4">
+      <section id="references" class="mt-8">
         <SectionHeading>References</SectionHeading>
         <ul>
           <li>
@@ -150,7 +155,7 @@ import GitHub from "../components/GitHub.astro";
           </li>
         </ul>
       </section>
-      <section id="contact" class="mt-4">
+      <section id="contact" class="mt-8">
         <SectionHeading>Contact</SectionHeading>
         <address class="not-italic">
           A: G06/1A Oakley Avenue, Waterview, Auckland, 1026<br />
@@ -163,10 +168,22 @@ import GitHub from "../components/GitHub.astro";
           >
         </address>
       </section>
+      <section id="socials" class="flex gap-2 mt-2">
+        <a href="https://github.com/bendaly818" class="w-6 h-6" target="_blank">
+          <GitHub />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/bendalynz"
+          class="w-6 h-6"
+          target="_blank"
+        >
+          <LinkedIn />
+        </a>
+      </section>
     </section>
   </main>
   <div
-    class="fixed -rotate-90 -right-8 md:right-0 bottom-28 translate-y-1/2 select-none tracking-wide"
+    class="fixed -rotate-90 -right-8 md:right-0 md:bottom-28 bottom-24 translate-y-1/2 select-none tracking-wide"
   >
     Curriculum Vitae
   </div>

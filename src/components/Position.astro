@@ -3,6 +3,7 @@ import List from './List.astro';
 
 interface Props {
   company: string;
+  languages?: string;
   titles: {
     title: string;
     tenure: string;
@@ -13,19 +14,20 @@ interface Props {
   headingClassName?:string,
 }
 
-const { company, titles, description,responsibilities ,headingClassName = 'mt-4', projects} = Astro.props;
+const { company, titles, description, responsibilities ,headingClassName = 'mt-4', projects, languages} = Astro.props;
 ---
 
 <h4 class:list={["text-lg font-semibold", headingClassName]}>{company}</h4>
 
 {
   titles.map((t) => (
-    <p class="text-sm">
+    <p class="text-sm font-[600]">
       {t.title} | {t.tenure}
     </p>
   ))
 }
 
+{languages && <p class="text-sm mt-2 font-[600]">{languages}</p>}
 {description && <p class="text-sm mt-2 whitespace-pre-wrap">{description}</p>}
 
 <div class="grid grid-cols-2 gap-3">
@@ -35,7 +37,7 @@ const { company, titles, description,responsibilities ,headingClassName = 'mt-4'
 <List items={responsibilities}/>}
 </span>
 <span>
-{projects?.length && <p class="text-sm mt-2">Key Projects:</p>
+{projects?.length && <p class="text-sm mt-2">Key Projects & Achievements:</p>
 <List items={projects}/>}
 </span>
 </div>

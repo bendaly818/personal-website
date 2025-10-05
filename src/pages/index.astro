@@ -3,57 +3,102 @@ import Layout from "../layouts/Layout.astro";
 import Position from "../components/Position.astro";
 import SectionHeading from "../components/SectionHeading.astro";
 import List from "../components/List.astro";
-import LinkedIn from "../icons/LinkedIn.astro";
-import GitHub from "../icons/GitHub.astro";
 import Section from "../components/Section.astro";
+import "../styles/global.css";
 ---
 
 <Layout title="Ben Daly | Engineering Manager | Full-stack Developer">
-  <main
-    class="m-4 lg:w-[210mm] w-100 rounded-md lg:py-8 lg:pl-8 lg:pr-16 py-4 pl-4 pr-8"
-  >
-    <h1 class="lg:text-6xl text-4xl font-extrabold tracking-wider">Ben Daly</h1>
-    <h2 class="lg:text-2xl text-lg font-bold lg:mt-4 mt-2 tracking-wide">
-      Engineering Manager | Full-stack Developer
-    </h2>
-
-    <Section id="work-experience" class="mt-8 print:mt-4">
-      <SectionHeading>Work</SectionHeading>
+  <main class="m-4 w-[210mm] rounded-md py-8 pl-8 pr-16">
+    <div class="flex justify-between">
+      <h1 class="text-6xl tracking-wider font-semibold self-center">
+        Ben Daly
+      </h1>
+      <div class="self-center">
+        <h2 class="text-2xl font-semibold tracking-wide">
+          Engineering Manager
+        </h2>
+        <h2 class="text-2xl font-semibold tracking-wide">
+          Full-stack Developer
+        </h2>
+      </div>
+    </div>
+    <Section id="bio">
+      <p class="text-sm mt-2">
+        I am an experienced Engineering Manager and Full-stack Developer with a
+        strong background in building scalable web applications, custom
+        integrations and leading engineering teams. I have a passion for
+        creating value for businesses through technology, crafting readable,
+        efficient, and maintainable code, and fostering a collaborative,
+        team-first environment. With expertise in both front-end and back-end
+        technologies, I excel at delivering end-to-end solutions that meet
+        business needs.
+      </p>
+    </Section>
+    <Section id="work-experience">
+      <SectionHeading>Experience</SectionHeading>
       <Position
         headingClassName="mt-2"
+        company="Woolworths"
+        titles={[
+          {
+            title: "Senior Full-stack Developer",
+            tenure: "July 2024 - Present",
+          },
+        ]}
+        languages="Azure, C#/.NET, TypeScript, Angular, Kubernetes, REST, gRPC, GraphQL, SQL Server"
+        description={`I am currently a Senior Full-stack Developer at Woolworths, working on end-of-the-funnel Ecommerce projects such as Payments, Cart, Checkout, and Order management.`}
+        responsibilities={[
+          "Technical evaluation and estimation of upcoming product features",
+          "Mentoring team members",
+          "Contributing to architecture discussions and decisions",
+          "Contributing to product discussions from a business and technical perspective",
+        ]}
+        projects={[
+          "Developed an end-to-end payments integration with our partner WPay, including ApplePay and GooglePay integrations",
+          "Worked end-to-end on the Trader application, including Cart, Checkout, Payments, and Order management",
+          "Key contributor to the migration of legacy payment/refund services to Kubernetes",
+          "Key contributor in ensuring GraphQL works in our digital transformation project",
+          "Chosen as part of a small team to evaluate the companies security posture and develop a plan to improve the immutability of backups organisation wide.",
+        ]}
+      />
+      <br />
+      <Position
         company="ArchiPro"
+        headingClassName="mt-2"
+        languages="PHP, React, GraphQL, Node.js, TypeScript, MySQL, AWS"
         titles={[
           {
             title: "Engineering Manager",
-            tenure: "Oct 2023 - Present",
+            tenure: "Oct 2023 - July 2024",
           },
           {
-            title: "Full-stack Developer",
+            title: "Senior Full-stack Developer",
             tenure: "Oct 2022 - Oct 2023",
           },
         ]}
-        description={`I am currently the Engineering Manager of ArchiPro's B2B Engineering Team, consisting of myself and four engineers. Collaborating with the Head of Product B2B directly, providing technical advice and knowledge on existing/upcoming features.
-
-I joined ArchiPro as a Full-stack Developer with a primary focus on Ecommerce integrations.`}
+        description={`I joined ArchiPro as a Full-stack Developer and was promoted to Engineering Manager of ArchiPro's B2B Engineering Team, consisting of myself and four engineers. Collaborating directly with the Head of Product, I provided technical ownership on existing/upcoming features.`}
         responsibilities={[
-          "Managing and providing guidance to a team of four engineers",
-          "Technical evaluation and estimation of upcoming product features",
-          "Providing technical insight to our product team",
-          "Developing and maintaining integrations with Ecommerce platforms",
-          "Developing and maintaining our internal Advertising tech stack",
+          "Managed and provided guidance to a team of four engineers",
+          "Technical evaluation, estimation and planning of upcoming product features",
+          "Provided technical insight to our product team",
+          "Developed and maintained integrations with Ecommerce platforms",
+          "Owned and developed ArchiPro's internal advertising operations solution",
           "Mentored team members",
           "Contributed to product discussions from both a wider business value and technical perspective",
-          "Stand-in team lead for leave cover",
         ]}
         projects={[
-          "Created and maintained several Ecommerce product and order integrations (WooCommerce, Shopify, Magento, Squarespace) as well as integrations with Airtable and HubSpot.",
+          "Created and maintained several integrations including WooCommerce, Shopify, Magento, Squarespace, Airtable and HubSpot.",
           "Contributed to technical design and architecture of our integration stack",
-          "Contributed to the wider product, building interfaces, fixing issues no matter the area",
+          "Contributed to the wider product, building interfaces, back-end services and fixing issues no matter the area",
           "Worked alongside ArchiPro's Head of Operations to improve our whole advertising Airtable solution",
+          "Awarded the Pro-of-the-month award during my tenure.",
         ]}
       />
+      <br />
       <Position
+        headingClassName="mt-2"
         company="Theta"
+        languages="C#/.NET, JavaScript, TypeScript, REST, React, SQL Server, Azure"
         titles={[
           {
             title: "Senior Consultant",
@@ -61,21 +106,17 @@ I joined ArchiPro as a Full-stack Developer with a primary focus on Ecommerce in
           },
           {
             title: "Consultant",
-            tenure: "Apr 2019 - Apr 2022",
-          },
-          {
-            title: "Graduate",
-            tenure: "Jan 2019 - Apr 2019",
+            tenure: "Jan 2019 - Apr 2022",
           },
         ]}
         description={`I worked as a Senior Consultant in the Product Group, where I developed custom integrations, led mobile app development, and contributed to infrastructure code among other tasks.`}
         responsibilities={[
-"Consulted with customers to develop custom integrations and bespoke features across multiple products.",
-"Collaborated with product owners to assess requirements and design features, contributing to technical design, architecture, and implementation.",
-"Conducted code reviews and automated/manage deployments/releases for products within the team portfolio.",
-"Built and contributed to key infrastructure code, encompassing both front-end and back-end.",
-"Provided technical mentorship to colleagues and managed/intern mentoring.",
-"Collaborated with colleagues on technical design and development of product features.",
+          "Consulted with customers to develop custom integrations and bespoke features across multiple products.",
+          "Collaborated with product owners to assess requirements and design features, contributing to technical design, architecture, and implementation.",
+          "Conducted code reviews and automated/manage deployments/releases for products within the team portfolio.",
+          "Built and contributed to key infrastructure code, encompassing both front-end and back-end.",
+          "Provided technical mentorship to colleagues and managed/intern mentoring.",
+          "Collaborated with colleagues on technical design and development of product features.",
         ]}
         projects={[
           "FAQ Bot (https://faqbot.ai): Notable features including self-service sign-up flow, live chat, flexible engagements, bot style customization, and FAQ Pages (statically generated).",
@@ -84,7 +125,8 @@ I joined ArchiPro as a Full-stack Developer with a primary focus on Ecommerce in
           "Generic Webhook System: Developed a generic webhook system for the in-house application framework.",
         ]}
       />
-
+      <!-- <br/>
+      <br/>
       <Position
         company="Hansen Technologies"
         titles={[
@@ -101,37 +143,41 @@ I joined ArchiPro as a Full-stack Developer with a primary focus on Ecommerce in
         projects={[
           "Created an interactive data visualisation within existing software using Java and JavaScript which saw immediate impact & use once deployed & sparked global interest within the company",
         ]}
-      />
+      /> -->
     </Section>
 
-    <Section id="skills">
-      <SectionHeading>Skills</SectionHeading>
+    <Section id="attributes">
+      <SectionHeading>Attributes</SectionHeading>
       <List
         items={[
-          "Charismatic and level-headed",
-          "Experienced in problem-solving",
-          "Creative and out-of-the-box thinker",
-          "Excellent communication skills",
           "Team player with a positive team-first attitude",
+          "Charismatic and level-headed",
+          "Creative and out-of-the-box thinker",
+          "Strong communication skills, both written and verbal",
+          "Quick learner and adaptable to new environments",
         ]}
       />
     </Section>
 
-    <Section id="languages-and-technologies">
-      <SectionHeading>Languages & Technologies</SectionHeading>
+    <Section id="technologies">
+      <SectionHeading>Proficiencies</SectionHeading>
       <p class="text-sm mt-2">
-        C#/.NET, JavaScript, TypeScript, React, Remix, SQL (SQL Server, MySQL),
-        PHP, GraphQL, Flutter/Dart (iOS & Android), AWS, Azure, CI/CD (GitHub
-        Actions, Azure DevOps, Bitbucket Pipelines), PowerShell, Git, Redis
+        <b>Programming Languages</b>: C#/.NET, JavaScript, TypeScript, SQL (SQL
+        Server, MySQL), PHP, Flutter/Dart<br />
+        <b>Cloud & DevOps</b>: Azure, AWS, Kubernetes, GitHub, Bitbucket, Azure
+        DevOps<br />
+        <b>Frameworks & Libraries</b>: ASP.NET Core/Framework, React, Angular,
+        Node.js, Silverstripe, Serverless-stack, Astro<br />
+        <b>Databases</b>: SQL Server, MySQL, PostgreSQL, DynamoDB, Redis<br />
+        <b>Other</b>: REST APIs, gRPC, GraphQL, Git, Kubernetes, Docker
       </p>
     </Section>
 
     <Section id="education">
       <SectionHeading>Education</SectionHeading>
       <p>
-        University of Auckland<br />
-        Bachelor of Science - Computer Science<br />
-        2014 - 2017
+        University of Auckland | Bachelor of Science - Computer Science | 2014 -
+        2017
       </p>
     </Section>
 
@@ -155,34 +201,36 @@ I joined ArchiPro as a Full-stack Developer with a primary focus on Ecommerce in
 
     <Section id="contact">
       <SectionHeading>Contact</SectionHeading>
-      <address class="not-italic">
-        A: G06/1A Oakley Avenue, Waterview, Auckland, 1026<br />
-        M: <a href="tel:+642102272749" class="underline underline-offset-2"
-          >+642102272749
-        </a><br />
-        E: <a
-          href="mailto:bendaly0403@gmail.com"
-          class="underline underline-offset-2">bendaly0403@gmail.com</a
-        >
-      </address>
-    </Section>
-
-    <section id="socials" class="flex gap-2 mt-2">
-      <a href="https://github.com/bendaly818" class="w-6 h-6" target="_blank">
-        <GitHub />
-      </a>
+      A: 73/124 Taylors Road, Mt Albert, Auckland, 1025<br />
+      M: <a href="tel:+642102272749" class="underline underline-offset-2"
+        >+642102272749
+      </a><br />
+      E: <a
+        href="mailto:bendaly0403@gmail.com"
+        class="underline underline-offset-2">bendaly0403@gmail.com</a
+      ><br />
+      GitHub:
       <a
-        href="https://www.linkedin.com/in/bendalynz"
-        class="w-6 h-6"
+        href="https://github.com/bendaly818"
+        class="underline underline-offset-2"
         target="_blank"
       >
-        <LinkedIn />
+        https://github.com/bendaly818
+      </a><br />
+      LinkedIn:
+      <a
+        href="https://www.linkedin.com/in/bendalynz"
+        class="underline underline-offset-2"
+        target="_blank"
+      >
+        https://www.linkedin.com/in/bendalynz
       </a>
-    </section>
-    <div
+    </Section>
+
+    <!-- <div
       class="fixed -rotate-90 -right-8 md:right-0 md:bottom-28 bottom-24 translate-y-1/2 select-none tracking-wide"
     >
       Curriculum Vitae
-    </div>
+    </div> -->
   </main>
 </Layout>
